@@ -1,14 +1,25 @@
 import random
-class Word:
+
+
+class Word: 
+
     def __init__(self):
+        """Get a word from the list to guess.
 
-        
-        words = open('words.txt')
-        self._get_word = random.choice(words)
-        dashboard = [' '] * len(words)
+        Args:
+            self (Word): An instance of Word.
+        """
+        _words = open('words.txt')
+        self._words = random.choice(_words)
 
-        return self._get_word, dashboard
+       
 
+    def get_words(self):
 
+        """Get a word from the list to guess.
 
+        Args:
+            self (Word): An instance of Word.
+        """
+        return self._words
     
