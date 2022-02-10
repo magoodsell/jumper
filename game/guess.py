@@ -36,7 +36,7 @@ class Guess:
         self._wrong_guesses = 0
         self._tick = 0
 
-        pass 
+         
 
     def get_guess(self):
         """
@@ -61,13 +61,13 @@ class Guess:
         for i in len(self._all_guesses):
             if guess == i:
                 print(f"'{guess}' has been chosen.\nPlease guess again.\n")
-        pass
+        
 
     def check_guess(self):
         """
         Checks the guess to make sure it matches a letter and returns an updated word.
         """
-        new_word = []
+        new_word = []   
         self._tick = 0
         self._wrong_guesses
         for i in len(self._word):
@@ -76,6 +76,8 @@ class Guess:
             else: 
                 new_word.append('_')
                 # self._wrong_guesses + 1
+                # need to update so tick is given 1 if nothing is appended to the new_word then 
+                # also need new_word to be the the result of the last terminal output
                 self._tick += 1
 
 
